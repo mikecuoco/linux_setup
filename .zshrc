@@ -1,7 +1,7 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-export PATH=$HOME/services/zsh/bin:$PATH
-export FPATH=$HOME/services/zsh/share/zsh/5.8.0.2-dev/functions:$FPATH
+export PATH=$HOME/bin/zsh/bin:$PATH
+export FPATH=$HOME/bin/share/zsh/5.7.1/functions:$FPATH
 
 # import bash settings
 precmd_functions=""
