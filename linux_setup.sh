@@ -18,13 +18,13 @@ then
 fi
 
 # if oh-my-zsh is installed, if not, install
-if ! ( -f $HOME/.oh-my-zsh )
+if ! [ -f "$HOME/.oh-my-zsh" ]
 then
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 fi
 
-# check for vundle  installation
-if ! ( -f $HOME/.vim/bundle/Vundle.vim )
+# check for vundle installation
+if ! [-f "$HOME/.vim/bundle/Vundle.vim" ]
 then
   git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
   vim +PluginInstall +qall
