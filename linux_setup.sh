@@ -12,7 +12,7 @@ then
   mkdir zsh && unxz zsh.tar.xz && tar -xvf zsh.tar -C zsh --strip-components 1
   cd zsh
   
-  ./configure --prefix=$HOME
+  ./configure --prefix=$HOME/services
   make
   make install
 fi
