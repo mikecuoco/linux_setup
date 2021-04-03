@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 cd $HOME 
 
@@ -15,7 +15,7 @@ then
   ./configure --prefix=$HOME/services
   make
   make install
-  export PATH=$HOME/services/zsh/bin:$PATH
+  PATH=$HOME/services/zsh/bin:$PATH
 fi
 
 # if oh-my-zsh is installed, if not, install
