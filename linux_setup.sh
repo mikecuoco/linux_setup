@@ -15,14 +15,13 @@ then
   ./configure --prefix=$HOME/services
   make
   make install
+  export PATH=$HOME/services/zsh/bin:$PATH
 fi
 
 # if oh-my-zsh is installed, if not, install
 if ! [ -d "$HOME/.oh-my-zsh" ]
 then
-  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-  rm .zshrc
-  mv .zshrc.pre-oh-my-zsh .zshrc
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" --unattended --keep-zshrc
 fi
 
 # check for vundle installation
