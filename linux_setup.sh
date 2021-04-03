@@ -1,4 +1,4 @@
-!#/bin/bash
+#!/bin/bash
 
 cd $HOME 
 
@@ -6,6 +6,8 @@ cd $HOME
 if ! command -v zsh
 then 
   # install zsh
+  mkdir services
+  cd services
   wget -O zsh.tar.xz https://sourceforge.net/projects/zsh/files/latest/download
   mkdir zsh && unxz zsh.tar.xz && tar -xvf zsh.tar -C zsh --strip-components 1
   cd zsh

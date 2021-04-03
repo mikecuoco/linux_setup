@@ -1,5 +1,7 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/services/zsh/bin:$PATH
+export FPATH=$HOME/services/zsh/share/zsh/5.8.0.2-dev/functions:$FPATH
 
 # import bash settings
 precmd_functions=""
@@ -76,13 +78,9 @@ export UPDATE_ZSH_DAYS=13
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git 
-	 osx
-	 web-search
 	 zsh-syntax-highlighting
-	 battery
 	 cp
-	 z
-	 docker
+	 themes
 	 zsh-autocomplete
 	 colored-man-pages)
 
@@ -113,21 +111,4 @@ fi
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias tscc='ssh mcuoco@tscc-login2.sdsc.edu'
-alias tunneltscc="ssh -fNL 5288:localhost:5288 mcuoco@tscc-login2.sdsc.edu"
 
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/usr/local/Caskroom/miniconda/base/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/usr/local/Caskroom/miniconda/base/etc/profile.d/conda.sh" ]; then
-        . "/usr/local/Caskroom/miniconda/base/etc/profile.d/conda.sh"
-    else
-        export PATH="/usr/local/Caskroom/miniconda/base/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
