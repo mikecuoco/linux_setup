@@ -1,4 +1,6 @@
-.Rproj.user
-.Rhistory
-.RData
-.Ruserdata
+*.*
+!.zshrc
+!.Rprofile
+!.gitconfig
+!.vimrc
+!linux_setup.sh
