@@ -5,17 +5,15 @@ cd $HOME
 # check if zsh is available, if not,  install
 if ! command -v zsh
 then 
-  # install zsh
-  mkdir bin
-  cd bin
+  # install zs
   wget -O zsh.tar.xz https://sourceforge.net/projects/zsh/files/latest/download
   mkdir zsh && unxz zsh.tar.xz && tar -xvf zsh.tar -C zsh --strip-components 1
   cd zsh
   
-  ./configure --prefix=$HOME/bin
+  ./configure --prefix=$HOME
   make
   make install
-  PATH=$HOME/bin/zsh/bin:$PATH
+  PATH=$HOME/bin:$PATH
   exec $HOME/bin/zsh -l
 fi
 
